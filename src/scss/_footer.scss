@@ -1,0 +1,16 @@
+.footer{
+    text-align: center;
+    padding: 1rem 0 2rem 0;
+    font-size: 0.9rem;
+
+    a {
+        color: $primary-verydark;
+        text-decoration: none;
+        transition: color 250ms ease-in-out;
+        font-weight: 700;
+    
+        &:hover{
+            color: $primary-neutral;
+        }
+    }
+}

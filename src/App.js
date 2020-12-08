@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { jobs } from "./jobs";
 import Header from "./components/Header";
 import JobList from "./components/JobList";
+import Footer from "./components/Footer";
 
 const initalState = {
     jobs,
@@ -55,6 +56,7 @@ function App() {
                 jobs={jobs} 
                 onTabletClick={onTabletClick} 
             />
+            <Footer />
         </>
     );
 }

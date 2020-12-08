@@ -235,6 +235,21 @@
   background: #5ba4a4;
 }
 
+.footer {
+  text-align: center;
+  padding: 1rem 0 2rem 0;
+  font-size: 0.9rem;
+}
+.footer a {
+  color: #2c3a3a;
+  text-decoration: none;
+  transition: color 250ms ease-in-out;
+  font-weight: 700;
+}
+.footer a:hover {
+  color: #5ba4a4;
+}
+
 *, *::after, *::before {
   box-sizing: border-box;
   padding: 0;
