@@ -1,0 +1,163 @@
+@mixin job-card-slected($color){
+    text-transform: uppercase;
+    color: $background-secondary;
+    padding: 0.5rem 0.5rem 0.3rem 0.5rem;
+    background: $color;
+    border-radius: 1.5rem;
+    font-size: 0.7rem;
+    margin-right: 0.5rem;
+}
+
+.joblist{
+    margin-top: 3rem;
+}
+
+.job-card{
+    background: $background-secondary;
+    border-radius: 5px;
+    margin: 1.5rem 0;      
+    overflow: hidden;
+    display: flex;  
+    align-items: center;
+    padding: 2rem;      
+    @include box-shadow-cards();
+
+    &--featured{
+        position: relative;
+    
+        &::before{
+            content: "";
+            position: absolute;
+            border-radius: 5px 0 0 5px;
+            width: 5px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            background: $primary-neutral;
+        }
+    }
+
+    &__logo{
+        margin-right: 1.5rem;
+    }
+
+    &__text-content-wrapper{
+        display: flex;
+        justify-content: space-between;
+        flex: 1 1 100%;
+        align-items: center;
+    }
+    
+    &__info{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-shrink: 0;
+        flex-grow: 1;
+        //flex: 0 1 50%;
+    }
+
+    &__info-primary{
+        font-weight: bold;
+
+        & > * {
+            display: inline-block;
+        }
+    }
+
+    &__company-name{
+        margin-right: 1.5rem;
+    }
+
+    &__new-item{
+        @include job-card-slected($primary-neutral);
+    }
+
+    &__featured{
+        @include job-card-slected($primary-verydark);
+    }
+
+    &__info-secondary{
+        color: $primary-dark;
+        /*display: flex;
+        width: 100%;
+        justify-content: space-between;*/
+    }
+
+    &__date{
+        padding-right: 1rem;
+    }
+
+    &__type{
+        padding: 0 1rem;
+        position: relative;
+
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: $primary-dark;
+            top: 50%;
+        }
+
+        &::before {
+            left: 0;
+            transform: translate(-50%, -50%)
+        }
+
+        &::after {
+            right: 0;
+            transform: translate(50%, -50%);
+        }
+
+    }
+
+    &__place{
+        padding-left: 1rem;
+    }
+
+    &__title a{
+        display: inline-block;
+        color: $primary-verydark;
+        text-decoration: none;
+        transition: color 250ms ease-in-out;
+        font-weight: 700;
+        letter-spacing: -1px;
+        margin: 0.75rem 0;
+
+        &:hover {
+            color: $primary-neutral;
+        }
+    }
+
+    &__tablets{
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        flex-shrink: 1;
+        flex-grow: 0;
+        padding-left: 0.5rem;
+    }
+
+    &__tablet-button{
+        background: $filter-tablets;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        overflow: hidden;
+        padding: 0.5rem;
+        transition: background 250ms ease-in-out, color 250ms ease-in-out;
+        cursor: pointer;
+    
+        &:hover {
+            color: $background-secondary;
+            background: $primary-neutral;
+        }
+    }
+}

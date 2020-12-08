@@ -1,0 +1,104 @@
+@media (max-width: 900px) {
+    .job-card{    
+        //padding: 1rem 2rem;  
+        //align-items: stretch;
+        position: relative;
+        margin-top: 4rem;
+    
+        &__logo{
+            margin-right: 1.5rem;
+        }
+    
+        &__text-content-wrapper{
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-top: 1rem;
+        }
+
+        &__info{
+            display: flex;
+            padding-bottom: 1rem;
+            width: 100%;
+            border-bottom: 1px solid $primary-dark;
+        }
+
+        &__tablets{
+            justify-content: flex-start;
+            padding-left: 0;
+        }
+
+        &__tablet-button{
+            margin-top: 1rem;
+            margin-bottom: 0;
+        }
+    }    
+}
+
+@media (max-width: 600px) {
+    body{
+        font-size: 14px;
+    }
+
+    .job-card{
+        display: block;
+        overflow: initial;
+    
+        &__logo{
+            position: absolute;
+            top: 0;
+            transform-origin: left center;
+            transform: translateY(-50%) scale(0.8);
+            z-index: 1;
+        }
+
+    }
+}
+
+@media (max-width: 400px){
+    .job-card{
+        padding: 1.5rem;
+
+        &__title a{
+            font-size: 1rem;
+        }
+
+        &__company-name{
+            margin-right: 0.5rem;
+        }
+
+        &__date{
+            padding-right: 0.5rem;
+        }
+    
+        &__type{
+            padding: 0 0.5rem;
+            position: relative;
+    
+            &::before, &::after {
+                content: "";
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background: $primary-dark;
+                top: 50%;
+            }
+    
+            &::before {
+                left: 0;
+                transform: translate(-50%, -50%)
+            }
+    
+            &::after {
+                right: 0;
+                transform: translate(50%, -50%);
+            }
+    
+        }
+
+        &__place{
+            padding-left: 0.5rem;
+        }
+    }
+}

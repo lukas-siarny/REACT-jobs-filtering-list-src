@@ -1,0 +1,15 @@
+$primary-neutral: hsl(180, 29%, 50%);
+$background-primary: hsl(180, 52%, 96%);
+$background-secondary: #fff; 
+$filter-tablets: hsl(180, 31%, 95%);
+$primary-dark: hsl(180, 8%, 52%);
+$primary-verydark: hsl(180, 14%, 20%);
+
+$font-family: 'Spartan', sans-serif;
+$font-size: 15px;
+
+@mixin box-shadow-cards(){
+    -webkit-box-shadow: 0px 9px 18px -3px hsla(180, 8%, 52%, 0.25);
+    -moz-box-shadow: 0px 9px 18px -3px hsla(180, 8%, 52%, 0.25);
+    box-shadow: 0px 9px 18px -3px hsla(180, 8%, 52%, 0.25);
+}
